@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import BigNumber from 'bignumber.js'
 import { useWeb3React } from '@web3-react/core'
-import { Button, Flex, Text, InjectedModalProps } from '@pancakeswap-libs/uikit'
+import { Button, Flex, Text, InjectedModalProps } from 'pixelswap-uikit'
 import { getFullDisplayBalance } from 'utils/formatBalance'
-import { getPancakeProfileAddress } from 'utils/addressHelpers'
+import { getPixelProfileAddress } from 'utils/addressHelpers'
 import { useCake } from 'hooks/useContract'
 import useI18n from 'hooks/useI18n'
 import useGetProfileCosts from 'hooks/useGetProfileCosts'
@@ -57,7 +57,7 @@ const StartPage: React.FC<StartPageProps> = ({ goToApprove, goToChange, goToRemo
    */
   useEffect(() => {
     const checkApprovalStatus = async () => {
-      const response = await cakeContract.methods.allowance(account, getPancakeProfileAddress()).call()
+      const response = await cakeContract.methods.allowance(account, getPixelProfileAddress()).call()
       const currentAllowance = new BigNumber(response)
       setNeedsApproval(currentAllowance.lt(cost))
     }

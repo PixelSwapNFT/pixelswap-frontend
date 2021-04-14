@@ -3,7 +3,7 @@ import { Route, useRouteMatch, useLocation } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import BigNumber from 'bignumber.js'
 import { useWeb3React } from '@web3-react/core'
-import { Image, Heading, RowType, Toggle, Text } from '@pancakeswap-libs/uikit'
+import { Image, Heading, RowType, Toggle, Text } from 'pixelswap-uikit'
 import styled from 'styled-components'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
@@ -204,7 +204,7 @@ const Farms: React.FC = () => {
     const { token, quoteToken } = farm
     const tokenAddress = token.address
     const quoteTokenAddress = quoteToken.address
-    const lpLabel = farm.lpSymbol && farm.lpSymbol.split(' ')[0].toUpperCase().replace('PANCAKE', '')
+    const lpLabel = farm.lpSymbol && farm.lpSymbol.split(' ')[0].toUpperCase().replace('PIXEL', '')
 
     const row: RowProps = {
       apr: {
@@ -345,7 +345,7 @@ const Farms: React.FC = () => {
           </FilterContainer>
         </ControlContainer>
         {renderContent()}
-        <StyledImage src="/images/3dpan.png" alt="Pancake illustration" width={120} height={103} />
+        <StyledImage src="/images/3dpan.png" alt="Pixel illustration" width={120} height={103} />
       </Page>
     </>
   )

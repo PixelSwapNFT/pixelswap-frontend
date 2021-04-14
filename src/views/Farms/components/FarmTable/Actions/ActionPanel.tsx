@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import useI18n from 'hooks/useI18n'
-import { LinkExternal, Text } from '@pancakeswap-libs/uikit'
+import { LinkExternal, Text } from 'pixelswap-uikit'
 import { FarmWithStakedValue } from 'views/Farms/components/FarmCard/FarmCard'
 import getLiquidityUrlPathParts from 'utils/getLiquidityUrlPathParts'
 import { communityFarms } from 'config/constants'
@@ -106,14 +106,14 @@ const ActionPanel: React.FunctionComponent<ActionPanelProps> = ({ details, apr, 
   const TranslateString = useI18n()
   const isActive = farm.multiplier !== '0X'
   const { quoteToken, token, dual } = farm
-  const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANCAKE', '')
+  const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PIXEL', '')
   const liquidityUrlPathParts = getLiquidityUrlPathParts({
     quoteTokenAddress: quoteToken.address,
     tokenAddress: token.address,
   })
   const lpAddress = farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]
   const bsc = `https://bscscan.com/address/${lpAddress}`
-  const info = `https://pancakeswap.info/pair/${lpAddress}`
+  const info = `https://pixelswapcoin.info/pair/${lpAddress}`
   const isCommunityFarm = communityFarms.includes(token.symbol)
 
   return (
@@ -121,7 +121,7 @@ const ActionPanel: React.FunctionComponent<ActionPanelProps> = ({ details, apr, 
       <InfoContainer>
         {isActive && (
           <StakeContainer>
-            <StyledLinkExternal href={`https://exchange.pancakeswap.finance/#/add/${liquidityUrlPathParts}`}>
+            <StyledLinkExternal href={`https://exchange.pixelswapcoin.com/#/add/${liquidityUrlPathParts}`}>
               {TranslateString(999, `Get ${lpLabel}`, { name: lpLabel })}
             </StyledLinkExternal>
           </StakeContainer>

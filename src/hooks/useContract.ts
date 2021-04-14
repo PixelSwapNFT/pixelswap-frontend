@@ -5,7 +5,7 @@ import {
   getCakeContract,
   getBunnyFactoryContract,
   getBunnySpecialContract,
-  getPancakeRabbitContract,
+  getPixelRabbitContract,
   getProfileContract,
   getIfoContract,
   getLotteryContract,
@@ -40,9 +40,9 @@ export const useBunnyFactory = () => {
   return useMemo(() => getBunnyFactoryContract(web3), [web3])
 }
 
-export const usePancakeRabbits = () => {
+export const usePixelRabbits = () => {
   const web3 = useWeb3()
-  return useMemo(() => getPancakeRabbitContract(web3), [web3])
+  return useMemo(() => getPixelRabbitContract(web3), [web3])
 }
 
 export const useProfile = () => {

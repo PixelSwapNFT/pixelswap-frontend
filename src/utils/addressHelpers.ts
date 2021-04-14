@@ -26,11 +26,11 @@ export const getLotteryAddress = () => {
 export const getLotteryTicketAddress = () => {
   return getAddress(addresses.lotteryNFT)
 }
-export const getPancakeProfileAddress = () => {
-  return getAddress(addresses.pancakeProfile)
+export const getPixelProfileAddress = () => {
+  return getAddress(addresses.pixelProfile)
 }
-export const getPancakeRabbitsAddress = () => {
-  return getAddress(addresses.pancakeRabbits)
+export const getPixelRabbitsAddress = () => {
+  return getAddress(addresses.pixelRabbits)
 }
 export const getBunnyFactoryAddress = () => {
   return getAddress(addresses.bunnyFactory)

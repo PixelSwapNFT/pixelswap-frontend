@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie'
-import { getProfileContract, getPancakeRabbitContract } from 'utils/contractHelpers'
+import { getProfileContract, getPixelRabbitContract } from 'utils/contractHelpers'
 import { Nft } from 'config/constants/types'
 import { Profile } from 'state/types'
 import { getTeam } from 'state/teams/helpers'
@@ -7,7 +7,7 @@ import nfts from 'config/constants/nfts'
 import { transformProfileResponse } from './helpers'
 
 const profileContract = getProfileContract()
-const rabbitContract = getPancakeRabbitContract()
+const rabbitContract = getPixelRabbitContract()
 const profileApi = process.env.REACT_APP_API_PROFILE
 
 export interface GetProfileResponse {
@@ -56,9 +56,9 @@ const getProfile = async (address: string): Promise<GetProfileResponse> => {
         `profile_${address}`,
         {
           username,
-          avatar: `https://pancakeswap.finance/images/nfts/${nft.images.sm}`,
+          avatar: `https://pixelswapcoin.com/images/nfts/${nft.images.sm}`,
         },
-        { domain: 'pancakeswap.finance', secure: true, expires: 30 },
+        { domain: 'pixelswapcoin.com', secure: true, expires: 30 },
       )
     }
 

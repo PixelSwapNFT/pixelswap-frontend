@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AutoRenewIcon, Button, Checkbox, Flex, InjectedModalProps, Text } from '@pancakeswap-libs/uikit'
+import { AutoRenewIcon, Button, Checkbox, Flex, InjectedModalProps, Text } from 'pixelswap-uikit'
 import useI18n from 'hooks/useI18n'
 import useGetProfileCosts from 'hooks/useGetProfileCosts'
 import { useDispatch } from 'react-redux'
@@ -17,7 +17,7 @@ const PauseProfilePage: React.FC<PauseProfilePageProps> = ({ onDismiss }) => {
   const { profile } = useProfile()
   const { numberCakeToReactivate } = useGetProfileCosts()
   const TranslateString = useI18n()
-  const pancakeProfileContract = useProfileContract()
+  const pixelProfileContract = useProfileContract()
   const { account } = useWeb3React()
   const { toastSuccess, toastError } = useToast()
   const dispatch = useDispatch()
@@ -25,7 +25,7 @@ const PauseProfilePage: React.FC<PauseProfilePageProps> = ({ onDismiss }) => {
   const handleChange = () => setIsAcknowledged(!isAcknowledged)
 
   const handleDeactivateProfile = () => {
-    pancakeProfileContract.methods
+    pixelProfileContract.methods
       .pauseProfile()
       .send({ from: account })
       .on('sending', () => {

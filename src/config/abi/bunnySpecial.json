@@ -12,8 +12,8 @@
         "type": "address"
       },
       {
-        "internalType": "contract IPancakeProfile",
-        "name": "_pancakeProfile",
+        "internalType": "contract IPixelProfile",
+        "name": "_pixelProfile",
         "type": "address"
       },
       {
@@ -370,10 +370,10 @@
   },
   {
     "inputs": [],
-    "name": "pancakeProfile",
+    "name": "pixelProfile",
     "outputs": [
       {
-        "internalType": "contract IPancakeProfile",
+        "internalType": "contract IPixelProfile",
         "name": "",
         "type": "address"
       }

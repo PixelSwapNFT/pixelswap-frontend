@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { Input } from '@pancakeswap-libs/uikit'
+import { Input } from 'pixelswap-uikit'
 import styled from 'styled-components'
 
 const StyledInput = styled(Input)`

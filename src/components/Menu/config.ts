@@ -1,4 +1,4 @@
-import { MenuEntry, menuStatus } from '@pancakeswap-libs/uikit'
+import { MenuEntry, menuStatus } from 'pixelswap-uikit'
 
 const config: MenuEntry[] = [
   {
@@ -12,11 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://exchange.pancakeswap.finance',
+        href: 'https://exchange.pixelswapcoin.com',
       },
       {
         label: 'Liquidity',
-        href: 'https://exchange.pancakeswap.finance/#/pool',
+        href: 'https://exchange.pixelswapcoin.com/#/pool',
       },
     ],
   },
@@ -70,19 +70,19 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Overview',
-        href: 'https://pancakeswap.info',
+        href: 'https://pixelswapcoin.com',
       },
       {
         label: 'Tokens',
-        href: 'https://pancakeswap.info/tokens',
+        href: 'https://pixelswapcoin.com/tokens',
       },
       {
         label: 'Pairs',
-        href: 'https://pancakeswap.info/pairs',
+        href: 'https://pixelswapcoin.com/pairs',
       },
       {
         label: 'Accounts',
-        href: 'https://pancakeswap.info/accounts',
+        href: 'https://pixelswapcoin.com/accounts',
       },
     ],
   },
@@ -97,27 +97,19 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Contact',
-        href: 'https://docs.pancakeswap.finance/contact-us',
+        href: 'https://docs.pixelswapcoin.com/contact-us',
       },
       {
         label: 'Voting',
-        href: 'https://voting.pancakeswap.finance',
+        href: 'https://voting.pixelswapcoin.com',
       },
       {
         label: 'Github',
-        href: 'https://github.com/pancakeswap',
+        href: 'https://github.com/pixelswap-proojects',
       },
       {
         label: 'Docs',
-        href: 'https://docs.pancakeswap.finance',
-      },
-      {
-        label: 'Blog',
-        href: 'https://pancakeswap.medium.com',
-      },
-      {
-        label: 'Merch',
-        href: 'https://pancakeswap.creator-spring.com/',
+        href: 'https://docs.pixelswapcoin.com',
       },
     ],
   },
